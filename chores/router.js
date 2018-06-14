@@ -29,7 +29,7 @@ router.get('/', function(req,res){
 });
 router.get('/:id/:date', function(req,res) {
     Chores
-    .findOne({creator: req.params.id,
+    .find({creator: req.params.id,
               date: req.params.date})
     .exec()
     .then(data => {
