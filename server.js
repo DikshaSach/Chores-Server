@@ -8,6 +8,7 @@ const passport = require('passport');
 const UserService = require('./services/userService');
 const path = require('path');
 const {router: userRouter} = require('./user');
+const choresRouter = require('./chores/router');
 const {router: authRouter, localStrategy, jwtStrategy} = require('./auth');
 const {PORT, DATABASE_URL} = require('./config');
 const app = express();
@@ -29,6 +30,7 @@ const jwtAuth = passport.authenticate('jwt', {session:false});
 // route
 app.use('/user', userRouter);
 app.use('/auth', authRouter);
+app.use('/chores', choresRouter);
 app.get('/protected', jwtAuth, (req, res)=>{
     return res.json({
         data: 'protected data'
