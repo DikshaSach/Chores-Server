@@ -8,4 +8,5 @@ Currently working on UI and attemping to learn animations/gradient effects and u
 Add a feature which allows users to see uncompleted tasks for the month which they can go in and hit complete on when finished. 
 
 ## API 
+Includes user authenication with passportJS backend database is currently MONGODB
 Currently only has one router ````'.../chores/'```` 
